@@ -5,6 +5,7 @@ Steps to deploy to App Service
 1. Using an FTP client of your choice, upload your JDBC driver, jboss-cli-commands.cli, startup_script.sh, to /site/deployments/tools/. FTP credentials can be found under **Deployment Center > FTPS credentials**
 2. Configure your site to run startup_script.sh when the container starts. In the Azure portal, navigate to **Configuration > General Settings > Startup Command**. Set the startup command field to /home/site/deployments/tools/startup_script.sh, then select Save.
 
+```
 # curl -vvv https://jboss-eap.azurewebsites.net/jay/
 *****
 < Transfer-Encoding: chunked
@@ -17,3 +18,4 @@ Steps to deploy to App Service
 < Content-Security-Policy: text/html
 < X-Content-Type-Options: X-content-type-options:nosniff
 < Strict-Transport-Security: max-age=3153600
+```
