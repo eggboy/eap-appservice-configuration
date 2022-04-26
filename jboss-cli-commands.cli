@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+/subsystem=undertow/configuration=filter/response-header=server-header:add(header-name=Server, header-value="N/A")
+/subsystem=undertow/server=default-server/host=default-host/filter-ref=server-header:add
+
+/subsystem=undertow/configuration=filter/response-header=x-powered-by-header:add(header-name="X-Powered-By", header-value="Undertow/1")
+/subsystem=undertow/server=default-server/host=default-host/filter-ref=x-powered-by-header:add
+
+/subsystem=undertow/configuration=filter/response-header=x-xss-protection:add(header-name="X-XSS-Protection", header-value="X-XSS-Protection=1; mode=block")
+/subsystem=undertow/server=default-server/host=default-host/filter-ref=x-xss-protection:add
+
+/subsystem=undertow/configuration=filter/response-header=x-frame-options:add(header-name="X-Frame-Options", header-value="sameorigin")
+/subsystem=undertow/server=default-server/host=default-host/filter-ref=x-frame-options:add
+
+/subsystem=undertow/configuration=filter/response-header=X-Content-type-options:add(header-name="X-Content-Type-Options", header-value="X-content-type-options:nosniff")
+/subsystem=undertow/server=default-server/host=default-host/filter-ref=X-Content-type-options:add
+
+/subsystem=undertow/configuration=filter/response-header=strict-transport-security:add(header-name="Strict-Transport-Security", header-value="max-age=3153600")
+/subsystem=undertow/server=default-server/host=default-host/filter-ref=strict-transport-security:add
+
+/subsystem=undertow/configuration=filter/response-header=content-security-policy:add(header-name="Content-Security-Policy", header-value="text/html")
+/subsystem=undertow/server=default-server/host=default-host/filter-ref=content-security-policy:add
