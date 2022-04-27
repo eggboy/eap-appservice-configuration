@@ -22,3 +22,5 @@ jobs:
           server-dir: /site/deployments/tools/
           exclude: |
             README.md
+            .git/**
+            .github/**
