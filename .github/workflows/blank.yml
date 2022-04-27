@@ -16,9 +16,9 @@ jobs:
       - name: FTP jboss-cli-commands.cli to App Service
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ${{ secrets.ftp_server }}
-          username: ${{ secrets.username }}
-          password: ${{ secrets.password }}
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
           server-dir: /site/deployments/tools/
           exclude: |
             README.md
