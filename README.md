@@ -1,3 +1,5 @@
+[![Deploy module changes to App Service](https://github.com/eggboy/eap-appservice-configuration/actions/workflows/blank.yml/badge.svg)](https://github.com/eggboy/eap-appservice-configuration/actions/workflows/blank.yml)
+
 # eap-appservice-configuration
 
 Steps to deploy to App Service
