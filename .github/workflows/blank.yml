@@ -1,0 +1,23 @@
+name: Deploy module changes to App Service
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get latest code
+        uses: actions/checkout@v3
+      - name: FTP jboss-cli-commands.cli to App Service
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.ftp_server }}
+          username: ${{ secrets.username }}
+          password: ${{ secrets.password }}
+          exclude: |
+            README.md
