@@ -21,3 +21,6 @@ Steps to deploy to App Service
 < X-Content-Type-Options: X-content-type-options:nosniff
 < Strict-Transport-Security: max-age=3153600
 ```
+
+# Enabling Access logs for JBoss 7
+https://access.redhat.com/solutions/2423311
