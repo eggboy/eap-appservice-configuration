@@ -1,5 +1,8 @@
 [![Deploy module changes to App Service](https://github.com/eggboy/eap-appservice-configuration/actions/workflows/blank.yml/badge.svg)](https://github.com/eggboy/eap-appservice-configuration/actions/workflows/blank.yml)
 
+# Migrate and Modernize JBoss EAP on Azure App Service (PaaS)
+Check the full article here: https://eggboy.medium.com/migrate-and-modernize-jboss-eap-on-azure-app-service-paas-fe0e0ec3fcb6
+
 # eap-appservice-configuration
 
 Steps to deploy to App Service
